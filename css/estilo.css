@@ -1,0 +1,25 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #b3f5df;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+.app-container {
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    max-width: 700px;
+    box-shadow: 0 16px 24px rgba(0,0,0,0.1)
+}
+button{
+    padding: 8px;
+    background: #27AE60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer
+}
+button:hover{
+    background: #d29224;
+}
