@@ -1,29 +1,25 @@
-# Projeto: Site simples (Livro)
+# Projeto integrado a API Open Library
 
-Descrição
--	Pequeno site estático usado para acompanhar o conteúdo do livro. Contém uma página HTML com estilos e um script JavaScript.
+## Descrição
+-	Pequeno site estático integrado com a API Open Library
 
-Estrutura de arquivos
+## Estrutura de arquivos
 -	[index.html](index.html) — página principal.
 -	[css/estilo.css](css/estilo.css) — estilos do site.
 -	[js/script.js](js/script.js) — scripts do cliente.
 
-Requisitos
+## Requisitos
 -	Navegador moderno (Chrome, Edge, Firefox).
 -	(OptionaI) VS Code com Live Server para desenvolvimento local.
 
-Como executar (simples)
+## Como executar 
 -	Abrir o arquivo `index.html` diretamente no navegador.
 
-
-Editar o projeto
--	Edite [index.html](index.html), [css/estilo.css](css/estilo.css) e [js/script.js](js/script.js).
-
-Contribuição
+## Contribuição
 -	Sinta-se à vontade para abrir issues ou pull requests com melhorias.
 
-Licença
+## Licença
 -	MIT
 
-Autor
+## Autor
 -	Prof. Ms. Ricardo Leme
