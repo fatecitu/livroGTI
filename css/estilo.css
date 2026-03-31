@@ -23,3 +23,17 @@ button{
 button:hover{
     background: #d29224;
 }
+
+.book-card{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+.book-card img{ 
+    width: 80px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
