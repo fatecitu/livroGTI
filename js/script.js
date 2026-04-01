@@ -44,6 +44,16 @@ async function buscarLivro(){
 
 function salvarLivro(titulo, capa, paginas, isbn){
     const estante = JSON.parse(localStorage.getItem('estante')) || []
+    //validação do ISBN
+    if(estante.find(livro => livro.isbn === isbn)){
+        Swal.fire({
+            title: 'ISBN já está favoritado',
+            text: 'O ISBN informado já está salvo na sua base',
+            icon: 'info'
+        })
+        return //paramos o processamento
+    }
+
     //pegamos o array e adicionamos no fim o novo registro
     estante.push({titulo, capa, paginas, isbn})
     //salvamos no localStorage
@@ -55,4 +65,25 @@ function salvarLivro(titulo, capa, paginas, isbn){
             showConfirmButton: false,
             timer: 1500 //tempo em ms
         })
+    carregaDados()
+    document.getElementById('isbn').value = '' //limpa o campo
+    document.getElementById('preview-container').innerHTML = '' //limpa o preview   
 }
+
+function carregaDados(){
+    const tabelaBody = document.getElementById('table-body')
+    //carrega os dados do LocalStorage
+    const estante = JSON.parse(localStorage.getItem('estante')) || []
+    //vamos percorrer cada elemento do array
+    estante.forEach(livro => {
+        const tr = document.createElement('tr')
+        tr.innerHTML = ` <td><img src='${livro.capa}' width='40'/></td>
+          <td>${livro.titulo}</td>
+          <td>${livro.isbn}</td>
+          <td>${livro.paginas}</td>
+        `
+        tabelaBody.appendChild(tr) //adiciona o tr na tabela
+    })
+}
+//carrega ao iniciar
+carregaDados()
